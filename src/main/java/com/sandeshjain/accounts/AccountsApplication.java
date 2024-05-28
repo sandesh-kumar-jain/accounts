@@ -15,7 +15,7 @@ import io.swagger.v3.oas.annotations.info.License;
  */
 @SpringBootApplication
 @EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
-@OpenAPIDefinition(info = @Info(title = "Accounts microservice REST API Documentation", description = "Sandesh-Jain-Bank Accounts microservice REST API Documentation", version = "v1", contact = @Contact(name = "Sandesh Jain", email = "tutor@sandesh-jain.com", url = "https://www.sandesh-jain.com"), license = @License(name = "Apache 2.0", url = "https://www.sandesh-jain.com")), externalDocs = @ExternalDocumentation(description = "Sandesh Jain Accounts microservice REST API Documentation", url = "https://www.sandesh-jain.com/swagger-ui.html"))
+@OpenAPIDefinition(info = @Info(title = "Accounts REST API(H2 Database) Documentation", description = "Sandesh-Jain-Bank Accounts REST API Documentation", version = "v1", contact = @Contact(name = "Sandesh Jain", email = "tutor@sandesh-jain.com", url = "https://www.sandesh-jain.com"), license = @License(name = "Apache 2.0", url = "https://www.sandesh-jain.com")), externalDocs = @ExternalDocumentation(description = "Sandesh Jain Accounts REST API Documentation", url = "https://www.sandesh-jain.com/swagger-ui.html"))
 public class AccountsApplication {
 
 	public static void main(String[] args) {
