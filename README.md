@@ -1,5 +1,8 @@
 # Getting Started
 
+### Reference Documentation
+For further reference, please consider the following sections:
+
 ### Swagger
 	http://localhost:9080/swagger-ui/index.html
 	http://localhost:9080/v3/api-docs
@@ -19,6 +22,24 @@
 - Good understanding on Java and Spring concepts
 - Basic understanding on SpringBoot & REST services is a bonus but not mandatory
 - Interest to learn and explore about Microservices
+
+* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
+* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.6/maven-plugin/reference/html/)
+* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.6/maven-plugin/reference/html/#build-image)
+* [Spring Reactive Web](https://docs.spring.io/spring-boot/docs/3.2.6/reference/htmlsingle/index.html#web.reactive)
+* [Azure Cosmos DB](https://microsoft.github.io/spring-cloud-azure/current/reference/html/index.html#spring-data-support)
+
+### Guides
+The following guides illustrate how to use some features concretely:
+
+* [Building a Reactive RESTful Web Service](https://spring.io/guides/gs/reactive-rest-service/)
+* [How to use Spring Boot Starter with Azure Cosmos DB SQL API](https://aka.ms/spring/msdocs/cosmos)
+
+### Additional Links
+These additional references should also help you:
+
+* [Azure Cosmos DB Sample](https://aka.ms/spring/samples/latest/cosmos)
+
 
 # Important Links
 - Spring Boot - https://spring.io/projects/spring-boot
@@ -74,44 +95,44 @@
 
 ## Maven Commands used in the course
 
-|     Maven Command       |     Description          |
-| ------------- | ------------- |
-| "mvn clean install -Dmaven.test.skip=true" | To generate a jar inside target folder |
-| "mvn spring-boot:run" | To start a springboot maven project |
-| "mvn spring-boot:build-image" | To generate a docker image using Buildpacks. No need of Dockerfile |
-| "mvn compile jib:dockerBuild" | To generate a docker image using Google Jib. No need of Dockerfile |
+| Maven Command                              | Description                                                        |
+|--------------------------------------------|--------------------------------------------------------------------|
+| "mvn clean install -Dmaven.test.skip=true" | To generate a jar inside target folder                             |
+| "mvn spring-boot:run"                      | To start a springboot maven project                                |
+| "mvn spring-boot:build-image"              | To generate a docker image using Buildpacks. No need of Dockerfile |
+| "mvn compile jib:dockerBuild"              | To generate a docker image using Google Jib. No need of Dockerfile |
 
 ## Docker Commands used in the course
 
-|     Docker Command       |     Description          |
-| ------------- | ------------- |
-| "docker build . -t sandesh/accounts:s4" | To generate a docker image based on a Dockerfile |
-| "docker run  -p 8080:8080 sandesh/accounts:s4" | To start a docker container based on a given image |
-| "docker images" | To list all the docker images present in the Docker server |
-| "docker image inspect image-id" | To display detailed image information for a given image id |
-| "docker image rm image-id" | To remove one or more images for a given image ids |
-| "docker image push docker.io/sandesh/accounts:s4" | To push an image or a repository to a registry |
-| "docker image pull docker.io/sandesh/accounts:s4" | To pull an image or a repository from a registry |
-| "docker ps" | To show all running containers |
-| "docker ps -a" | To show all containers including running and stopped |
-| "docker container start container-id" | To start one or more stopped containers |
-| "docker container pause container-id" | To pause all processes within one or more containers |
-| "docker container unpause container-id" | To unpause all processes within one or more containers |
-| "docker container stop container-id" | To stop one or more running containers |
-| "docker container kill container-id" | To kill one or more running containers instantly |
-| "docker container restart container-id" | To restart one or more containers |
-| "docker container inspect container-id" | To inspect all the details for a given container id |
-| "docker container logs container-id" | To fetch the logs of a given container id |
-| "docker container logs -f container-id" | To follow log output of a given container id |
-| "docker container rm container-id" | To remove one or more containers based on container ids |
-| "docker container prune" | To remove all stopped containers |
-| "docker compose up" | To create and start containers based on given docker compose file |
-| "docker compose down" | To stop and remove containers |
-| "docker compose start" | To start containers based on given docker compose file |
-| "docker compose down" | To stop the running containers |
-| "docker run -p 3306:3306 --name accountsdb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=accountsdb -d mysql" | To create a MySQL DB container |
-| "docker run -p 6379:6379 --name sandeshredis -d redis" | To create a Redis Container |
-| "docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.3 start-dev" | To create Keycloak Container|
+| Docker Command                                                                                                                | Description                                                       |
+|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| "docker build . -t sandesh/accounts:s4"                                                                                       | To generate a docker image based on a Dockerfile                  |
+| "docker run  -p 8080:8080 sandesh/accounts:s4"                                                                                | To start a docker container based on a given image                |
+| "docker images"                                                                                                               | To list all the docker images present in the Docker server        |
+| "docker image inspect image-id"                                                                                               | To display detailed image information for a given image id        |
+| "docker image rm image-id"                                                                                                    | To remove one or more images for a given image ids                |
+| "docker image push docker.io/sandesh/accounts:s4"                                                                             | To push an image or a repository to a registry                    |
+| "docker image pull docker.io/sandesh/accounts:s4"                                                                             | To pull an image or a repository from a registry                  |
+| "docker ps"                                                                                                                   | To show all running containers                                    |
+| "docker ps -a"                                                                                                                | To show all containers including running and stopped              |
+| "docker container start container-id"                                                                                         | To start one or more stopped containers                           |
+| "docker container pause container-id"                                                                                         | To pause all processes within one or more containers              |
+| "docker container unpause container-id"                                                                                       | To unpause all processes within one or more containers            |
+| "docker container stop container-id"                                                                                          | To stop one or more running containers                            |
+| "docker container kill container-id"                                                                                          | To kill one or more running containers instantly                  |
+| "docker container restart container-id"                                                                                       | To restart one or more containers                                 |
+| "docker container inspect container-id"                                                                                       | To inspect all the details for a given container id               |
+| "docker container logs container-id"                                                                                          | To fetch the logs of a given container id                         |
+| "docker container logs -f container-id"                                                                                       | To follow log output of a given container id                      |
+| "docker container rm container-id"                                                                                            | To remove one or more containers based on container ids           |
+| "docker container prune"                                                                                                      | To remove all stopped containers                                  |
+| "docker compose up"                                                                                                           | To create and start containers based on given docker compose file |
+| "docker compose down"                                                                                                         | To stop and remove containers                                     |
+| "docker compose start"                                                                                                        | To start containers based on given docker compose file            |
+| "docker compose down"                                                                                                         | To stop the running containers                                    |
+| "docker run -p 3306:3306 --name accountsdb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=accountsdb -d mysql"                 | To create a MySQL DB container                                    |
+| "docker run -p 6379:6379 --name sandeshredis -d redis"                                                                        | To create a Redis Container                                       |
+| "docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:22.0.3 start-dev" | To create Keycloak Container                                      |
 
 
 
